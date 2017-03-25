@@ -49,8 +49,12 @@ describe Symbolify do
       assert_equal "VS232", Symbolify.symbolify("\u{E01D7}")
     end
 
+    it "works with non-characters" do
+      assert_equal "n/c", Symbolify.symbolify("\u{10FFFF}")
+    end
+
     it "works with unassigned characters" do
-      assert_equal "n/a", Symbolify.symbolify("\u{FFFF}")
+      assert_equal "n/a", Symbolify.symbolify("\u{E0000}")
     end
   end
 
