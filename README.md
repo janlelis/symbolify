@@ -15,7 +15,21 @@ gem 'symbolify'
 ## Usage
 
 ```ruby
-Symbolify.symbolify "A"
+puts Symbolify.symbolify "A"   # A
+puts Symbolify.symbolify "🌫"   # 🌫
+puts Symbolify.symbolify "\0"   # ␀
+puts Symbolify.symbolify "\n"   # ␊
+puts Symbolify.symbolify "\x7F"   # ␡
+puts Symbolify.symbolify "\u{84}"   # IND
+puts Symbolify.symbolify "\u{200F}"   # RLM
+puts Symbolify.symbolify "\u{2067}"   # RLI
+puts Symbolify.symbolify "\u{0300}"   # ◌̀
+puts Symbolify.symbolify " "   # ] [
+puts Symbolify.symbolify "\u{E0020}"   # TAG ␠
+puts Symbolify.symbolify "\u{E01D7}"   # VS232
+puts Symbolify.symbolify "\u{E0000}"   # n/a
+puts Symbolify.symbolify "\u{10FFFF}"   # n/c
+puts Symbolify.symbolify "\x80"   # �
 ```
 
 ## MIT License
