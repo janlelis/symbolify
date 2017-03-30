@@ -4,6 +4,7 @@
 
 * Add special characters (U+FFF9 - U+FFFC)
 * Non-control separators return ⏎
+* Ensure that only first character/codepoint will be returned
 
 ### 1.0.0
 

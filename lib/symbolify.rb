@@ -538,6 +538,7 @@ module Symbolify
 
     char = char.dup.encode("UTF-8")
     ord = char.ord
+    char = char[0]
 
     if char_info.delete?
       char = CONTROL_DELETE_SYMBOL
@@ -571,6 +572,7 @@ module Symbolify
 
     ord = char.ord
     encoding = char_info.encoding
+    char = char[0]
     no_converter = !!(NO_UTF8_CONVERTER =~ encoding.name)
     treat_char_unconverted = false
 
@@ -600,6 +602,8 @@ module Symbolify
   end
 
   def self.ascii(char, char_info = AsciiCharacteristics.new(char))
+    char = char[0]
+
     if char_info.delete?
       char = CONTROL_DELETE_SYMBOL
     elsif char_info.c0?
@@ -612,10 +616,10 @@ module Symbolify
   end
 
   def self.binary(char, _ = nil)
-    dump(char)
+    dump(char[0])
   end
 
   def self.dump(char)
-    char.dump
+    char[0].dump
   end
 end

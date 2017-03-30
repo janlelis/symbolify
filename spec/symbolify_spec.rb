@@ -6,6 +6,10 @@ describe Symbolify do
     it "will show replacement character for invalid characters" do
       assert_equal "�", Symbolify.symbolify("\x80")
     end
+
+    it "will only return first character" do
+      assert_equal "a", Symbolify.symbolify("ab")
+    end
   end
 
   describe ".unicode" do
