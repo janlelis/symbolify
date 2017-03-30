@@ -25,6 +25,8 @@ puts Symbolify.symbolify "\u{200F}"   # RLM
 puts Symbolify.symbolify "\u{2067}"   # RLI
 puts Symbolify.symbolify "\u{0300}"   # ◌̀
 puts Symbolify.symbolify " "   # ] [
+puts Symbolify.symbolify "\u{FFF9}"   # IAA
+puts Symbolify.symbolify "\u{FFFC}"   # OBJ
 puts Symbolify.symbolify "\u{E0020}"   # TAG ␠
 puts Symbolify.symbolify "\u{E01D7}"   # VS232
 puts Symbolify.symbolify "\u{E0000}"   # n/a

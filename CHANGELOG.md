@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.0.1
+
+Add special characters (U+FFF9 - U+FFFC)
+
 ### 1.0.0
 
 * Import from unibits gem

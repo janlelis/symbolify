@@ -96,6 +96,14 @@ module Symbolify
     0x2069 => "PDI",
   }.freeze
 
+  # no official aliases at the time of adding
+  SPECIALS = {
+    0xFFF9 => "IAA",
+    0xFFFA => "IAS",
+    0xFFFB => "IAT",
+    0xFFFC => "OBJ",
+  }.freeze
+
   TAG_NAMES = {
     0xE0001 => "LANG TAG",
     0xE0020 => "TAG ␠",
@@ -549,6 +557,8 @@ module Symbolify
       char = "]" + char + "["
     elsif TAG_NAMES.key?(ord)
       char = TAG_NAMES[ord]
+    elsif SPECIALS.key?(ord)
+      char = SPECIALS[ord]
     end
 
     char

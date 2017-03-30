@@ -41,6 +41,15 @@ describe Symbolify do
       assert_equal "] [", Symbolify.symbolify(" ")
     end
 
+    it "replaces annotation characters" do
+      assert_equal "IAA", Symbolify.symbolify("\u{FFF9}")
+      assert_equal "IAS", Symbolify.symbolify("\u{FFFA}")
+    end
+
+    it "replaces object replacement character" do
+      assert_equal "OBJ", Symbolify.symbolify("\u{FFFC}")
+    end
+
     it "replaces tags" do
       assert_equal "TAG ␠", Symbolify.symbolify("\u{E0020}")
     end
