@@ -553,6 +553,8 @@ module Symbolify
       char = "◌" + char
     elsif char_info.category == "Me"
       char = " " + char
+    elsif char_info.separator?
+      char = "⏎"
     elsif char_info.blank?
       char = "]" + char + "["
     elsif TAG_NAMES.key?(ord)

@@ -37,6 +37,11 @@ describe Symbolify do
       assert_equal " \u{20E3}", Symbolify.symbolify("\u{20E3}")
     end
 
+    it "replaces uncommon newline characters" do
+      assert_equal "⏎", Symbolify.symbolify("\u{2028}")
+      assert_equal "⏎", Symbolify.symbolify("\u{2029}")
+    end
+
     it "wraps blanks" do
       assert_equal "] [", Symbolify.symbolify(" ")
     end

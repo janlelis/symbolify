@@ -1,8 +1,9 @@
 ## CHANGELOG
 
-### 1.0.1
+### 1.1.0
 
-Add special characters (U+FFF9 - U+FFFC)
+* Add special characters (U+FFF9 - U+FFFC)
+* Non-control separators return ⏎
 
 ### 1.0.0
 
