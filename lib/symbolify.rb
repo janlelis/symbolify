@@ -468,27 +468,6 @@ module Symbolify
     0xE01EF => "VS256",
   }.freeze
 
-  NONCHARACTERS = [
-      *0xFDD0..0xFDEF,
-      0xFFFE,  0xFFFF,
-     0x1FFFE, 0x1FFFF,
-     0x2FFFE, 0x2FFFF,
-     0x3FFFE, 0x3FFFF,
-     0x4FFFE, 0x4FFFF,
-     0x5FFFE, 0x5FFFF,
-     0x6FFFE, 0x6FFFF,
-     0x7FFFE, 0x7FFFF,
-     0x8FFFE, 0x8FFFF,
-     0x9FFFE, 0x9FFFF,
-     0xAFFFE, 0xAFFFF,
-     0xBFFFE, 0xBFFFF,
-     0xCFFFE, 0xCFFFF,
-     0xDFFFE, 0xDFFFF,
-     0xEFFFE, 0xEFFFF,
-     0xFFFFE, 0xFFFFF,
-    0x10FFFE, 0x10FFFF,
-  ].freeze
-
   INTERESTING_BYTES_ENCODINGS = {
     0xD8 => /^macCroatian/,
     0xF0 => /^mac(Iceland|Roman|Turkish)/,
@@ -529,7 +508,7 @@ module Symbolify
 
   def self.unicode(char, char_info = UnicodeCharacteristics.new(char))
     if !char_info.assigned?
-      if NONCHARACTERS.include?(char.ord)
+      if char_info.noncharacter?
         return "n/c"
       else
         return "n/a"
@@ -548,8 +527,10 @@ module Symbolify
       char = CONTROL_C1_NAMES[ord]
     elsif char_info.bidi_control?
       char = BIDI_CONTROL_NAMES[ord]
-    elsif VARIATION_SELECTOR_NAMES.key?(ord)
+    elsif char_info.variation_selector?
       char = VARIATION_SELECTOR_NAMES[ord]
+    elsif char_info.tag?
+      char = TAG_NAMES[ord]
     elsif char_info.category == "Mn"
       char = "◌" + char
     elsif char_info.category == "Me"
@@ -558,8 +539,6 @@ module Symbolify
       char = "⏎"
     elsif char_info.blank?
       char = "]" + char + "["
-    elsif TAG_NAMES.key?(ord)
-      char = TAG_NAMES[ord]
     elsif SPECIALS.key?(ord)
       char = SPECIALS[ord]
     end
