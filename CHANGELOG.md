@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.1.1
+
+* Change "TAG ␡" to "TAG ✦"
+
 ### 1.1.0
 
 * Add special characters (U+FFF9 - U+FFFC)

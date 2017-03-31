@@ -201,7 +201,7 @@ module Symbolify
     0xE007C => "TAG |",
     0xE007D => "TAG }",
     0xE007E => "TAG ~",
-    0xE007F => "TAG ␡",
+    0xE007F => "TAG ✦",
   }.freeze
 
   VARIATION_SELECTOR_NAMES = {
