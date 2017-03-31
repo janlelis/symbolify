@@ -29,7 +29,8 @@ puts Symbolify.symbolify "\u{FFF9}"   # IAA
 puts Symbolify.symbolify "\u{FFFC}"   # OBJ
 puts Symbolify.symbolify "\u{E0020}"   # TAG ␠
 puts Symbolify.symbolify "\u{E01D7}"   # VS232
-puts Symbolify.symbolify "\u{E0000}"   # n/a
+puts Symbolify.symbolify "\u{D0000}"   # n/a
+puts Symbolify.symbolify "\u{E0000}"   # n/a*
 puts Symbolify.symbolify "\u{10FFFF}"   # n/c
 puts Symbolify.symbolify "\x80"   # �
 ```

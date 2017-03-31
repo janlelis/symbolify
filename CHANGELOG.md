@@ -1,7 +1,8 @@
 ## CHANGELOG
 
-### 1.1.1
+### 1.2.0
 
+* Return "n/a*" for unassigned codepoints which are ignorable
 * Change "TAG ␡" to "TAG ✦"
 
 ### 1.1.0

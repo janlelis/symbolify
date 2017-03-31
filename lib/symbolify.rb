@@ -510,6 +510,8 @@ module Symbolify
     if !char_info.assigned?
       if char_info.noncharacter?
         return "n/c"
+      elsif char_info.ignorable?
+        return "n/a*"
       else
         return "n/a"
       end

@@ -72,7 +72,11 @@ describe Symbolify do
     end
 
     it "works with unassigned characters" do
-      assert_equal "n/a", Symbolify.symbolify("\u{E0000}")
+      assert_equal "n/a", Symbolify.symbolify("\u{D0000}")
+    end
+
+    it "adds a * to unassigned characters which are ignorable" do
+      assert_equal "n/a*", Symbolify.symbolify("\u{E0000}")
     end
   end
 
