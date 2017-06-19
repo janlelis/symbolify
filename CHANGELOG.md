@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.3.0
+
+* Unicode 10 general categories
+
 ### 1.2.0
 
 * Return "n/a*" for unassigned codepoints which are ignorable
