@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.3.1
+
+* Allow version of characteristics dependency to 1.x
+
 ### 1.3.0
 
 * Unicode 10 general categories
