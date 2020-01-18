@@ -5,10 +5,10 @@ require File.dirname(__FILE__) + "/lib/symbolify/version"
 Gem::Specification.new do |gem|
   gem.name          = "symbolify"
   gem.version       = Symbolify::VERSION
-  gem.summary       = "Represent arbitrary codepoints in the terminal."
-  gem.description   = "Safely print all codepoints from Unicode and single-byte encodings."
+  gem.summary       = "Represent arbitrary code points in the terminal"
+  gem.description   = "Safely print all code points from Unicode or single-byte encodings"
   gem.authors       = ["Jan Lelis"]
-  gem.email         = ["mail@janlelis.de"]
+  gem.email         = ["hi@ruby.consulting"]
   gem.homepage      = "https://github.com/janlelis/symbolify"
   gem.license       = "MIT"
 
@@ -17,6 +17,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.required_ruby_version = "~> 2.0"
+  gem.required_ruby_version = ">= 2.0"
   gem.add_dependency "characteristics", ">= 0.8", "< 2.0"
 end
