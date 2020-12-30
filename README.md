@@ -1,4 +1,4 @@
-# Symbolify [![[version]](https://badge.fury.io/rb/symbolify.svg)](http://badge.fury.io/rb/symbolify)  [![[travis]](https://travis-ci.org/janlelis/symbolify.svg)](https://travis-ci.org/janlelis/symbolify)
+# Symbolify [![[version]](https://badge.fury.io/rb/symbolify.svg)](https://badge.fury.io/rb/symbolify)  [![[ci]](https://github.com/janlelis/symbolify/workflows/Test/badge.svg)](https://github.com/janlelis/symbolify/actions?query=workflow%3ATest)
 
 Safely print all codepoints from Unicode and single-byte encodings in UTF-8. It replaces control and non-printable characters with readable equivalents and wraps most blank characters in `]` and `[`.
 
