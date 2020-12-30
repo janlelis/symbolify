@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+### 1.4.0
+
+* Relax Ruby version requirement to allow Ruby 3.0
+* Remove UNICODE_VERSION constant since it only mirrors the one
+  of the unicode-categories gem
+
 ### 1.3.1
 
 * Allow version of characteristics dependency to 1.x
