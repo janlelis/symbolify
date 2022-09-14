@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.4.1
+
+* 2022 rerelease - update ci, no changes
+
 ### 1.4.0
 
 * Relax Ruby version requirement to allow Ruby 3.0
