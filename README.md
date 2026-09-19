@@ -37,4 +37,4 @@ puts Symbolify.symbolify "\x80"   # �
 
 ## MIT License
 
-Copyright (C) 2017-2022 Jan Lelis <https://janlelis.com>. Released under the MIT license.
+Copyright (C) 2017-2026 Jan Lelis <https://janlelis.com>. Released under the MIT license.
