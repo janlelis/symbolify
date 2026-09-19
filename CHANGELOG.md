@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 1.4.2
+
+* 2026 rerelease - update ci, no changes
+
 ### 1.4.1
 
 * 2022 rerelease - update ci, no changes
